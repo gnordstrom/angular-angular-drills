@@ -1,0 +1,11 @@
+h1, h3, p, label {
+	color: #fff;
+}
+
+.container {
+	text-align: center;
+}
+
+.info-card {
+	/*border: 1px solid #fff;*/
+}

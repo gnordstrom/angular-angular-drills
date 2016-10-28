@@ -1,6 +1,28 @@
-<html>
-	<body>
-		Something
+<html ng-app="myApp">
+<head>
+	<title>App 3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+	<body ng-controller="mainCtrl">
+			<div class="container">
+				<h1>List of Current Employees:</h1>
+				<br>
+				<h3>Filter by:</h3>
+				<label>Name: </label> <input ng-model="nameFilter" placeholder="Search by Name"/>
+				<br>
+				<label>Phone: </label> <input ng-model="phoneFilter" placeholder="Search by Phone"/>
+				<br>
+				<label>E-Mail: </label> <input ng-model="emailFilter" placeholder="Search by E-Mail"/>
+				<hr>
+				<div class="info-card" ng-repeat="person in employees | filter: {name: nameFilter, phone: phoneFilter, email: emailFilter}">
+					<h3>{{person.name}}</h3>
+					<h6>Phone: {{person.phone}}</h6>
+					<h6>E-mail: <em>{{person.email}}</em></h6>
+				</div>
+
+
+			</div>
 				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

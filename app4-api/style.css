@@ -1,0 +1,40 @@
+img {
+  height: 220px;
+  margin-top: 50px;
+}
+
+.header-img {
+  text-align: center;
+  margin: 10px auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+
+}
+
+table {
+  text-align: center;
+}
+
+th {
+  width: 200px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.special1 {
+	width: 400px;
+}
+.special2 {
+	width: 250px;
+}
+
+.border {
+	border-right: 0.5px dashed gray;
+}
+h1, table, th {
+	color: #fff;
+}
