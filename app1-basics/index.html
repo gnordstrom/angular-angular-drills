@@ -1,6 +1,20 @@
-<html>
-	<body>
-	
+<html ng-app="app1">
+	<head>
+		<title>App 1</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css" rel="stylesheet" integrity="sha384-D9XILkoivXN+bcvB2kSOowkIvIcBbNdoDQvfBNsxYAIieZbx8/SI4NeUvrRGCpDi" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body ng-controller="mainCtrl">
+
+		<div class="container">
+			<h1>The Magical Input/Output Machine</h1>
+			<hr>
+			<div class="content">
+				<label>Input: </label> <input type="text" ng-model="input">
+				<label>Output: </label> {{input}}
+			</div>
+
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>

@@ -1,0 +1,20 @@
+body {
+	background-color: steelblue !important;
+}
+
+
+.container {
+	margin-top: 75px;
+	color: #fff;
+	border: 1px solid white;
+	height: 300px;
+}
+
+.content {
+	color: black;
+	font-size: 25px;
+}
+
+h1 {
+	text-align: center;
+}
