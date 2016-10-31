@@ -1,7 +1,24 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<html ng-app="app3">
+	<head>
+		<title>App 3</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body ng-controller="mainCtrl">
+		<div class="container">
+			<div class="filter">
+				<h2>Filter by:</h2>
+				<label>Name: </label> <input type="text" ng-model="nameFilter">
+				<label>Phone: </label> <input type="text" ng-model="phoneFilter">
+				<label>E-Mail: </label> <input type="text" ng-model="emailFilter">
+			</div>
+			<div class="content">
+				<ol>
+					<li ng-repeat="person in people | filter : {name: nameFilter, phone: phoneFilter, email: emailFilter}"><strong>{{person.name}}</strong> -- {{person.phone }} -- <em>{{person.email}}</em></li>
+				</ol>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>
